@@ -10,10 +10,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"go.uber.org/dig"
 
-	healthRepo "github.com/Cora23tt/auth-Cora23tt-personal/internal/repository/health"
 	healthHandler "github.com/Cora23tt/auth-Cora23tt-personal/internal/rest/handlers/health"
-
-	healthService "github.com/Cora23tt/auth-Cora23tt-personal/internal/usecase/health"
 
 	"github.com/Cora23tt/auth-Cora23tt-personal/internal/rest"
 )
@@ -35,8 +32,6 @@ func execute(host, port string) error {
 
 		gin.New,
 
-		healthRepo.NewRepo,
-		healthService.NewService,
 		healthHandler.NewHandler,
 
 		rest.NewServer,
