@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net"
 	"net/http"
@@ -51,17 +52,17 @@ func execute(host, port string) error {
 	container := dig.New()
 	for _, dep := range deps {
 		if err := container.Provide(dep); err != nil {
-			return err
+			return fmt.Errorf("failed to provide dependency: %w", err)
 		}
 	}
 
 	if err := container.Invoke(func(server *rest.Server) {
 		server.Init()
 	}); err != nil {
-		return err
+		return fmt.Errorf("failed to invoke server: %w", err)
 	}
 
-	return container.Invoke(func(server *http.Server) error {
+	return fmt.Errorf("server failed to start: %w", container.Invoke(func(server *http.Server) error {
 		return server.ListenAndServe()
-	})
+	}))
 }

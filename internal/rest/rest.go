@@ -20,13 +20,12 @@ type Server struct {
 }
 
 func (s *Server) Init() {
-
-	const baseUrl = "/api/v1"
+	const baseURL = "/api/v1"
 
 	s.mux.Use(gin.Recovery())
 	s.mux.Use(gin.Logger())
 
-	publicGroup := s.mux.Group(baseUrl + "/public")
+	publicGroup := s.mux.Group(baseURL + "/public")
 	{
 		publicGroup.GET("/health", s.h.HealthCheck)
 	}

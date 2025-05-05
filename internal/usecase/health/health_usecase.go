@@ -2,6 +2,7 @@ package health
 
 import (
 	"context"
+	"fmt"
 
 	"github.com/alif-academy-uz/auth-Cora23tt/internal/repository/health"
 )
@@ -15,5 +16,5 @@ func NewService(h *health.Repo) *Service {
 }
 
 func (s *Service) Check(ctx context.Context) error {
-	return s.repo.Ping(ctx)
+	return fmt.Errorf("health check failed: %w", s.repo.Ping(ctx))
 }
