@@ -3,7 +3,7 @@ package rest
 import (
 	"net/http"
 
-	"github.com/alif-academy-uz/auth-Cora23tt/internal/rest/handlers/health"
+	"github.com/Cora23tt/auth-Cora23tt-personal/internal/rest/handlers/health"
 	"github.com/gin-gonic/gin"
 )
 

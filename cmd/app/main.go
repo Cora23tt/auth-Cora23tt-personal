@@ -10,12 +10,12 @@ import (
 	"github.com/gin-gonic/gin"
 	"go.uber.org/dig"
 
-	healthRepo "github.com/alif-academy-uz/auth-Cora23tt/internal/repository/health"
-	healthHandler "github.com/alif-academy-uz/auth-Cora23tt/internal/rest/handlers/health"
+	healthRepo "github.com/Cora23tt/auth-Cora23tt-personal/internal/repository/health"
+	healthHandler "github.com/Cora23tt/auth-Cora23tt-personal/internal/rest/handlers/health"
 
-	healthService "github.com/alif-academy-uz/auth-Cora23tt/internal/usecase/health"
+	healthService "github.com/Cora23tt/auth-Cora23tt-personal/internal/usecase/health"
 
-	"github.com/alif-academy-uz/auth-Cora23tt/internal/rest"
+	"github.com/Cora23tt/auth-Cora23tt-personal/internal/rest"
 )
 
 func main() {

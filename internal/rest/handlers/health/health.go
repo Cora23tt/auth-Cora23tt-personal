@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/alif-academy-uz/auth-Cora23tt/internal/usecase/health"
+	"github.com/Cora23tt/auth-Cora23tt-personal/internal/usecase/health"
 	"github.com/gin-gonic/gin"
 )
 

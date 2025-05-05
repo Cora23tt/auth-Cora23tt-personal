@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/alif-academy-uz/auth-Cora23tt/internal/repository/health"
+	"github.com/Cora23tt/auth-Cora23tt-personal/internal/repository/health"
 )
 
 type Service struct {
